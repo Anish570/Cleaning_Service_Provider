@@ -1,12 +1,11 @@
-import Nav from "../components/Nav"
-
-
 const Home = () => {
     return (
         <>
-            <Nav />
+            <div className="text-center ">
+                <img src="/images/tenor.gif" alt="Tensor Animation" className="w-full h-auto" />
+            </div>
         </>
-    )
+    );
 }
 
-export default Home
+export default Home;
