@@ -52,7 +52,7 @@ const AppointmentForm = () => {
 
     return (
         <div className="flex flex-col md:flex-row justify-between shadow-md my-3 md:my-0">
-            <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col md:flex-row grow py-6 px-2 md:items-center justify-around bg-white ">
+            <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5 md:gap-0 md:flex-row grow py-6 px-2 md:items-center justify-around bg-white ">
                 <InputLabel
                     title="Name"
                     type="text"
