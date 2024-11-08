@@ -36,8 +36,8 @@ const Nav = () => {
         },
     ]
     return (
-        <div className="absolute w-screen z-10">
-            <div className="bg-blue-500 text-white w-full h-[22px] text-[12px] text-left pl-[10%] mb-2">
+        <div className="absolute z-10 w-full overflow-hidden">
+            <div className="bg-blue-500 text-white h-[22px] text-[12px] text-left pl-[10%] mb-2">
                 <p> <span className="text-[#fff9]"> Phone no:</span> +00 1234 567 or <span className="text-[#fff9]">  email us:</span> emailsample@email.com</p>
             </div>
             <div className="bg-[rgba(255,255,255,0.2)] text-white shadow-lg w-full h-[85px]">

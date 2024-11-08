@@ -1,3 +1,4 @@
+import AppointmentFrom from "../components/AppointmentFrom";
 import Button from "../components/Button";
 
 const Home = () => {
@@ -15,13 +16,15 @@ const Home = () => {
                             Let us do the dirty work, so you <br /> don&apos;t have to.
                         </h1>
                         <div className="space-x-5 absolute bottom-2 left-0">
-                            <Button title="Appointment" bgcolor="#2b98f0" textcolor="white" link="#" />
-                            <Button title="call now" bgcolor="#f3e53d" textcolor="black" link="#" />
+                            <Button title="Appointment" bgcolor="#2b98f0" textcolor="white" hovertxt="#2b98f0" link="#" />
+                            <Button title="call now" bgcolor="#f3e53d" textcolor="black" link="#" hovertxt="#f3e53d" />
                         </div>
                     </div>
                 </div>
             </div>
-
+            <div className="w-[80%] absolute left-1/2 translate-x-[-50%] top-[95%]">
+                <AppointmentFrom />
+            </div>
         </>
     );
 }
