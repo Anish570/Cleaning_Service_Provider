@@ -1,5 +1,6 @@
 import AppointmentFrom from "../components/AppointmentFrom";
 import Button from "../components/Button";
+import AboutSection from "../sections/AboutSection";
 
 const Home = () => {
     return (
@@ -24,7 +25,9 @@ const Home = () => {
             </div>
             <div className="w-[80%] absolute left-1/2 translate-x-[-50%] top-[95%]">
                 <AppointmentFrom />
+                <AboutSection />
             </div>
+
         </>
     );
 }
