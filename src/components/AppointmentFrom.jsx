@@ -6,7 +6,7 @@ const Select = ({ label, name, options, placeholder, register, required, error }
     return (
         <label className="">
             <p className="text-blue-600 font-medium text-[13px] uppercase">{label}:</p>
-            <select {...register(name, { required })} className="py-2 outline-none border-b-2 border-b-slate-600 text-[13px] font-medium">
+            <select {...register(name, { required })} className="py-2 outline-none border-b-2 border-b-slate-600 text-[13px] font-medium w-full">
                 <option value="" disabled className="text-gray-400 text-[13px] font-medium">
                     {placeholder}
                 </option>
@@ -29,7 +29,7 @@ const InputLabel = ({ title, type, name, placeholder, register, required, error 
             <input
                 type={type}
                 {...register(name, { required, pattern: type === "email" ? /^[^\s@]+@[^\s@]+\.[^\s@]+$/ : undefined })}
-                className="text-[13px] font-medium py-2 outline-none border-b-2 border-b-slate-600"
+                className="text-[13px] font-medium py-2 outline-none border-b-2 border-b-slate-600 w-full"
                 placeholder={placeholder}
             />
             {error && <p className="absolute text-red-500 text-sm">{error.message}</p>}
@@ -51,8 +51,8 @@ const AppointmentForm = () => {
     };
 
     return (
-        <div className="flex justify-between shadow-md">
-            <form onSubmit={handleSubmit(onSubmit)} className="flex grow py-6 px-2 items-center justify-around bg-white ">
+        <div className="flex flex-col md:flex-row justify-between shadow-md my-3 md:my-0">
+            <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col md:flex-row grow py-6 px-2 md:items-center justify-around bg-white ">
                 <InputLabel
                     title="Name"
                     type="text"
@@ -104,7 +104,7 @@ const AppointmentForm = () => {
                 />
             </form>
             {/* <button onClick={handleSubmit(onSubmit)} type="submit" className="bg-[#2b98f0] text-center">Make An Appointment</button> */}
-            <div onClick={handleSubmit(onSubmit)} className="flex items-center bg-[#2b98f0]">
+            <div onClick={handleSubmit(onSubmit)} className="flex items-center justify-center bg-[#2b98f0]">
                 <Button title="Make An Appointment" type="submit" hovertxt="yellow" />
             </div>
         </div>
